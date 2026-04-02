@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Adja Ndew Diouf</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        :root {
+            --bordeaux: #6D2123;
+            --rose-poudre: #F1D6C6;
+            --saumon: #D17866;
+            --blanc: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--rose-poudre);
+            color: var(--bordeaux);
+        }
+
+        header { 
+            padding: 30px 5%; 
+            text-align: center; 
+            background: var(--blanc); 
+        }
+        .logo { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--bordeaux); }
+        nav ul { display: flex; justify-content: center; list-style: none; gap: 30px; padding: 20px 0; margin: 0; }
+        nav ul li a { text-decoration: none; color: var(--bordeaux); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; }
+        nav ul li a.active { color: var(--saumon); }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 80px 10%;
+            align-items: start;
+        }
+
+        .contact-info h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .contact-details p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* STYLE DES RÉSEAUX SOCIAUX (Correction des points marron) */
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-circle {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bordeaux);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white !important; /* Force l'icône en blanc */
+            text-decoration: none;
+            font-size: 22px;
+            transition: 0.4s ease;
+        }
+
+        .social-circle:hover {
+            background-color: var(--saumon);
+            transform: translateY(-5px);
+        }
+
+        /* FORMULAIRE */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            box-shadow: 15px 15px 0px var(--bordeaux);
+        }
+
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-weight: 700; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 10px; text-transform: uppercase; }
+        
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(109, 33, 35, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            background: #fdf8f5;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 20px;
+            background: var(--bordeaux);
+            color: white;
+            border: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover { background: var(--saumon); }
+
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Adja Ndew Diouf</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">ACCUEIL</a></li>
+                <li><a href="a_propos.html">À PROPOS</a></li>
+                <li><a href="projets.html">PROJETS</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-info">
+            <h1>Parlons de votre projet</h1>
+            <div class="contact-details">
+                <p>Vous avez une idée innovante ? Je suis prête à relever le défi avec vous.</p>
+                <p><strong>Localisation :</strong> Dakar, Sénégal</p>
+                <p><strong>Email :</strong> adjandewdiouf@email.com</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/TON_PROFIL" target="_blank" class="social-circle">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/aadja.ndw" target="_blank" class="social-circle">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://github.com/TON_PSEUDO" target="_blank" class="social-circle">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label>Nom complet</label>
+                    <input type="text" placeholder="Votre nom...">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Votre message</label>
+                    <textarea rows="5" placeholder="Comment puis-je vous aider ?"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer le message</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
